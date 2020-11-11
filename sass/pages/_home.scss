@@ -99,3 +99,39 @@
         }
     }
 }
+
+.parallax {
+    padding: 5rem 0rem;
+    background-image: url(../../images/shutterstock_1115675732bw.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 39.4rem;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color-quaternary, .8);
+    }
+
+    &__img {
+        width: 32.5rem;
+        height: 28.3rem;
+        
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
