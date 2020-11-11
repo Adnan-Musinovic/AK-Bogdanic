@@ -72,3 +72,30 @@
         transform: translateX(-50%);
     }
 }
+
+.o-meni {
+    & ul {
+        margin: 0rem 0rem 2rem 4rem;
+    }
+
+    & li {
+        position: relative;
+        padding-left: 1.2rem;
+        
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+            height: .6rem;
+            width: .6rem;
+            border-radius: 50%;
+            background-color: $color-secondary;
+        }
+    }
+}

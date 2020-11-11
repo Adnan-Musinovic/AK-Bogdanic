@@ -32,3 +32,35 @@ body {
     line-height: 0;
     margin: 0;
 }
+
+.o-meni {
+    color: $color-quinary;
+    &--heading {
+        color: $color-secondary;
+        font-size: 8.2rem;
+        font-weight: 700;
+        line-height: 1.25;
+        text-transform: uppercase;
+        margin-bottom: 2.4rem;
+    }
+
+    & p {
+        line-height: 1.4;
+        margin-bottom: 2.4rem;
+    }
+}
+
+h5 {
+    color: $color-secondary;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    text-transform: capitalize;
+    margin-bottom: 1.9rem;
+    display: flex;
+    align-items: center;
+
+    & svg {
+        margin-right: 1.3rem;
+    }
+}
+

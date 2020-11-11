@@ -23,6 +23,11 @@ a {
 ul {
   list-style: none; }
 
+img {
+  height: auto;
+  width: 100%;
+  vertical-align: bottom; }
+
 html {
   font-size: 62.5%; }
 
@@ -48,6 +53,38 @@ body {
   padding: 0;
   line-height: 0;
   margin: 0; }
+
+.o-meni {
+  color: #6B6B6B; }
+  .o-meni--heading {
+    color: #284266;
+    font-size: 8.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem; }
+  .o-meni p {
+    line-height: 1.4;
+    margin-bottom: 2.4rem; }
+
+h5 {
+  color: #284266;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  text-transform: capitalize;
+  margin-bottom: 1.9rem;
+  display: flex;
+  align-items: center; }
+  h5 svg {
+    margin-right: 1.3rem; }
+
+.grid {
+  display: grid;
+  width: 100%; }
+
+.o-meni .grid {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center; }
 
 .header {
   position: fixed;
@@ -134,3 +171,22 @@ body {
     left: 50%;
     bottom: 2.5rem;
     transform: translateX(-50%); }
+
+.o-meni ul {
+  margin: 0rem 0rem 2rem 4rem; }
+
+.o-meni li {
+  position: relative;
+  padding-left: 1.2rem; }
+  .o-meni li:not(:last-child) {
+    margin-bottom: 1rem; }
+  .o-meni li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    height: .6rem;
+    width: .6rem;
+    border-radius: 50%;
+    background-color: #284266; }
