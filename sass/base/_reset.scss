@@ -12,3 +12,18 @@ html, body {
 body {
     background-color: $color-senary;
 }
+
+.wrapper {
+    display: flex;
+    width: 90%;
+    margin: 0% auto;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
