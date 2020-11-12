@@ -64,3 +64,43 @@ h5 {
     }
 }
 
+.usluge {
+    &--heading {
+        color: $color-secondary;
+        font-size: 8.2rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 5.5rem;
+        text-transform: uppercase;
+    }   
+    
+    & h4 {
+        color: $color-secondary;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.25;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 1.9rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: .1rem;
+            width: 11rem;
+            background-color: $color-tertiary;
+        }
+    }
+
+    & p {
+        color: $color-secondary;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 1.42;
+        margin-top: 1.9rem;
+    }
+}
+

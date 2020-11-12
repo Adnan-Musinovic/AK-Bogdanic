@@ -78,13 +78,64 @@ h5 {
   h5 svg {
     margin-right: 1.3rem; }
 
+.usluge--heading {
+  color: #284266;
+  font-size: 8.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 5.5rem;
+  text-transform: uppercase; }
+
+.usluge h4 {
+  color: #284266;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 1.9rem; }
+  .usluge h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: .1rem;
+    width: 11rem;
+    background-color: #F89963; }
+
+.usluge p {
+  color: #284266;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.42;
+  margin-top: 1.9rem; }
+
 .grid {
   display: grid;
   width: 100%; }
 
 .o-meni .grid {
   grid-template-columns: repeat(2, 1fr);
-  align-items: center; }
+  align-items: center;
+  position: relative; }
+  .o-meni .grid__item--2 {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+
+.usluge .grid {
+  margin-top: 10rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12.5rem; }
+  .usluge .grid__item {
+    position: relative;
+    padding: 2.5rem;
+    box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.13); }
+    .usluge .grid__item svg {
+      position: absolute;
+      top: -4rem;
+      left: -4rem; }
 
 .header {
   position: fixed;
@@ -172,6 +223,9 @@ h5 {
     bottom: 2.5rem;
     transform: translateX(-50%); }
 
+.o-meni__content {
+  padding: 10rem 10rem 10rem 0rem; }
+
 .o-meni ul {
   margin: 0rem 0rem 2rem 4rem; }
 
@@ -219,3 +273,23 @@ h5 {
       height: 100%;
       width: 100%;
       object-fit: cover; }
+
+.usluge {
+  padding: 10rem 0rem;
+  text-align: center; }
+  .usluge .wrapper {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .usluge .box {
+    position: relative;
+    width: 94.6rem;
+    padding: 2.5rem;
+    border: 0.1rem solid #F89963;
+    border-radius: 1rem;
+    margin-top: 10rem; }
+    .usluge .box svg {
+      position: absolute;
+      top: -9rem;
+      left: 50%;
+      transform: translateX(-50%); }

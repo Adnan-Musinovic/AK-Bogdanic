@@ -7,5 +7,33 @@
     & .grid {
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
+        position: relative;
+        &__item {
+            &--2 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+.usluge {
+    & .grid {
+        margin-top: 10rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12.5rem;
+
+        &__item {
+            position: relative;
+            padding: 2.5rem;
+            box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.13);
+
+            & svg {
+                position: absolute;
+                top: -4rem;
+                left: -4rem;
+            }
+        }
     }
 }
