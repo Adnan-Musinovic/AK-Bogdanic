@@ -1,16 +1,11 @@
 .hero {
     background-image: url(../../images/Slika.png);
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
     position: relative;
     z-index: 1;
     overflow: hidden;
     color: $color-senary;
     display: flex;
+    @include background-image;
     @include space-between-center;
     
     &::after {
@@ -26,30 +21,48 @@
         background-color: rgba($color-primary, .8);
     }
 
+    &__line {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translateY(-50%);
+        height: 2.5rem;
+        width: 7.5rem;
+        background-color: $color-tertiary;
+    }
+
     &__content {
         margin-top: 14rem;
         & .wrapper {
             justify-content: space-between;
             align-items: flex-start;
             flex-direction: column;
-            padding-left: 4rem;
+            padding-left: 3rem;
         }
 
         &--bottom {
             display: flex;
             align-items: flex-end;
         }
+
+        & .language {
+            & span {
+                display: inline-block;
+                color: $color-tertiary;
+                text-transform: uppercase;
+            }
+        }
     }
 
     &__social {
-        margin-right: 5rem;
+        margin-right: 2.5rem;
         & a {
             color: $color-tertiary;
             font-size: 4rem;
             line-height: 0;
 
             &:not(:last-child) {
-                margin-right: 5.5rem;
+                margin-right: 2.5rem;
             }
         }
         
@@ -57,6 +70,7 @@
 
     &__img {
         height: 34rem;
+        margin-right: -15rem;
 
         & img {
             height: auto;
@@ -76,7 +90,7 @@
 .o-meni {
 
     &__content {
-        padding: 10rem 10rem 10rem 0rem;
+        padding: 5rem 5rem 5rem 0rem;
     }
 
     & ul {
@@ -108,13 +122,15 @@
 .parallax {
     padding: 5rem 0rem;
     background-image: url(../../images/shutterstock_1115675732bw.png);
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 39.4rem;
     position: relative;
     z-index: 1;
+    @include background-image;
+    height: 39.4rem;
+
+    & .wrapper {
+        position: relative;
+        height: 100%;
+    }
 
     &::after {
         content: '';
@@ -132,6 +148,7 @@
     &__img {
         width: 32.5rem;
         height: 28.3rem;
+        position: absolute;
         
         & img {
             height: 100%;

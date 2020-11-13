@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -11,6 +15,23 @@ html, body {
 
 body {
     background-color: $color-senary;
+}
+
+.loader {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    z-index: 666;
+    height: 100%;
+    width: 100%;
+    background-color: $color-primary;
+
+    & .wrapper {
+        @include center;
+        height: 100%;
+    }
 }
 
 .wrapper {

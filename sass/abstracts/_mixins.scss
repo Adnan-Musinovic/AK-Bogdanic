@@ -2,3 +2,17 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin background-image {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
