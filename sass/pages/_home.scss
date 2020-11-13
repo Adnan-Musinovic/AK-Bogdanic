@@ -72,6 +72,10 @@
         height: 34rem;
         margin-right: -15rem;
 
+        @media only screen and(max-width: $medium-devices) {
+            display: none;
+        }
+
         & img {
             height: auto;
             width: 100%;

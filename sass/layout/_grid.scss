@@ -8,13 +8,32 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         position: relative;
+
+        @media only screen and(max-width: $extra-large-devices) {
+            grid-template-columns: 1fr;
+            gap: 5rem;
+        }
+
         &__item {
+            
             &--2 {
                 position: absolute;
                 bottom: 0;
                 left: 50%;
+
+                & img {
+                    height: auto;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                @media only screen and(max-width: $extra-large-devices) {
+                    position: relative;
+                    left: 0;
+                }
             }
         }
+
     }
 }
 
@@ -24,15 +43,39 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 12.5rem;
 
+        @media only screen and(max-width: $extra-large-devices) {
+            gap: 7.5rem;
+        }
+
+        @media only screen and(max-width: $large-devices) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 7.5rem;
+        }
+
+        @media only screen and(max-width: $medium-devices) {
+            grid-template-columns: 1fr;
+            gap: 12.5rem;
+        }
+
         &__item {
             position: relative;
             padding: 2.5rem;
             box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.13);
 
+            @media only screen and(max-width: $medium-devices) {
+                padding: 7.5rem 0rem;
+            }
+
             & svg {
                 position: absolute;
                 top: -4rem;
                 left: -4rem;
+
+                @media only screen and(max-width: $medium-devices) {
+                    top: -4rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
         }
     }

@@ -38,7 +38,20 @@ body {
 .wrapper {
   display: flex;
   width: 90%;
+  max-width: 1200px;
   margin: 0% auto; }
+  @media only screen and (max-width: 1200px) {
+    .wrapper {
+      background-color: pink; } }
+  @media only screen and (max-width: 1024px) {
+    .wrapper {
+      background-color: orangered; } }
+  @media only screen and (max-width: 768px) {
+    .wrapper {
+      background-color: lightblue; } }
+  @media only screen and (max-width: 480px) {
+    .wrapper {
+      background-color: rebeccapurple; } }
 
 a {
   display: inline-block;
@@ -182,23 +195,54 @@ h5 {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   position: relative; }
+  @media only screen and (max-width: 1200px) {
+    .o-meni .grid {
+      grid-template-columns: 1fr;
+      gap: 5rem; } }
   .o-meni .grid__item--2 {
     position: absolute;
     bottom: 0;
     left: 50%; }
+    .o-meni .grid__item--2 img {
+      height: auto;
+      width: 100%;
+      object-fit: cover; }
+    @media only screen and (max-width: 1200px) {
+      .o-meni .grid__item--2 {
+        position: relative;
+        left: 0; } }
 
 .usluge .grid {
   margin-top: 10rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 12.5rem; }
+  @media only screen and (max-width: 1200px) {
+    .usluge .grid {
+      gap: 7.5rem; } }
+  @media only screen and (max-width: 1024px) {
+    .usluge .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7.5rem; } }
+  @media only screen and (max-width: 768px) {
+    .usluge .grid {
+      grid-template-columns: 1fr;
+      gap: 12.5rem; } }
   .usluge .grid__item {
     position: relative;
     padding: 2.5rem;
     box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.13); }
+    @media only screen and (max-width: 768px) {
+      .usluge .grid__item {
+        padding: 7.5rem 0rem; } }
     .usluge .grid__item svg {
       position: absolute;
       top: -4rem;
       left: -4rem; }
+      @media only screen and (max-width: 768px) {
+        .usluge .grid__item svg {
+          top: -4rem;
+          left: 50%;
+          transform: translateX(-50%); } }
 
 .header {
   position: absolute;
@@ -289,6 +333,9 @@ h5 {
   .hero__img {
     height: 34rem;
     margin-right: -15rem; }
+    @media only screen and (max-width: 768px) {
+      .hero__img {
+        display: none; } }
     .hero__img img {
       height: auto;
       width: 100%;
