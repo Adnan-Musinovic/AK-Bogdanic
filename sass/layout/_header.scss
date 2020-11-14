@@ -9,4 +9,40 @@
     & .wrapper {
         @include space-between-center;
     }
+
+    & .logo {
+        display: none;
+
+        @media only screen and(max-width: $medium-devices) {
+            display: inline-block;
+            width: 10rem;
+            height: auto;
+            object-fit: cover;
+            position: relative;
+            z-index: 999;
+        }
+    }
+
+    & .menu {
+        height: 2.5rem;
+        width: 4rem;
+        cursor: pointer;
+        display: none;
+        position: relative;
+        z-index: 999;
+
+        @media only screen and(max-width: $medium-devices) {
+            display: inline-block;
+        }
+
+        &__line {
+            height: .4rem;
+            width: 100%;
+            background-color: $color-secondary;
+
+            &:not(:last-child) {
+                margin-bottom: .6rem;
+            }
+        }
+    }
 }

@@ -1,5 +1,5 @@
 .hero {
-    background-image: url(../../images/Slika.png);
+    background-image: url(../images/Slika.png);
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -7,6 +7,11 @@
     display: flex;
     @include background-image;
     @include space-between-center;
+
+    @media only screen and(max-width: $medium-devices) {
+        justify-content: center;
+        align-items: center;
+    }
     
     &::after {
         content: '';
@@ -33,11 +38,19 @@
 
     &__content {
         margin-top: 14rem;
+
+        @media only screen and(max-width: $medium-devices) {
+            margin-top: auto;
+        }
         & .wrapper {
             justify-content: space-between;
             align-items: flex-start;
             flex-direction: column;
             padding-left: 3rem;
+
+            @media only screen and(max-width: $medium-devices) {
+                padding-left: 0rem;
+            }
         }
 
         &--bottom {
@@ -125,7 +138,7 @@
 
 .parallax {
     padding: 5rem 0rem;
-    background-image: url(../../images/shutterstock_1115675732bw.png);
+    background-image: url(../images/shutterstock_1115675732bw.png);
     position: relative;
     z-index: 1;
     @include background-image;
