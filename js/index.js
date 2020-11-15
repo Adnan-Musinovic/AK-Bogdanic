@@ -11,7 +11,8 @@ window.addEventListener('load', ()=> {
     const heroParagraph = document.querySelector('.hero--paragraph');
     const heroLine = document.querySelector('.hero__line');
     const socialIcon = document.querySelectorAll('.hero__social a');
-    const language = document.querySelectorAll('.language span');
+    const heroImg = document.querySelector('.hero__img');
+    const language = document.querySelectorAll('.language button');
     const oMeniHeading = document.querySelector('.o-meni--heading');
     const oMeniParagraph = document.querySelectorAll('.o-meni p');
     const oMeniHeadingSamll = document.querySelectorAll('.o-meni h5');
@@ -60,6 +61,12 @@ window.addEventListener('load', ()=> {
         opacity: 0,
         ease: Power3.ease
     },.2)
+
+    .from(heroImg,.3,{
+        opacity: 0,
+        scale: 1.5,
+        ease: Power3.ease
+    })
 
     let scene = new ScrollMagic.Scene({
         triggerHook: 0
@@ -170,7 +177,6 @@ window.addEventListener('load', ()=> {
 });
 
 //Navigation
-
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('.nav');
 
@@ -178,3 +184,18 @@ menu.addEventListener('click', ()=> {
     nav.classList.toggle('nav--open');
 })
 
+
+//Language active btn
+var btns = document.querySelectorAll(".lang-btn");
+
+Array.from(btns).forEach(item => {
+
+   item.addEventListener("click", () => {
+
+      var selected = document.getElementsByClassName("active");
+      selected[0].className = selected[0].className.replace(" active", "");
+      item.className += " active";
+
+   });
+
+});

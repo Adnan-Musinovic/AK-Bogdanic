@@ -1,29 +1,27 @@
 .hero {
-    background-image: url(../images/Slika.png);
+    background-image: url(../../images/Slika.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 10rem 0rem;
     position: relative;
-    z-index: 1;
     overflow: hidden;
-    color: $color-senary;
-    display: flex;
-    @include background-image;
-    @include space-between-center;
+    z-index: 1;
 
-    @media only screen and(max-width: $medium-devices) {
-        justify-content: center;
-        align-items: center;
-    }
-    
     &::after {
         content: '';
         position: absolute;
+        z-index: -1;
         top: 0%;
         right: 0%;
         bottom: 0%;
         left: 0%;
-        z-index: -1;
         height: 100%;
         width: 100%;
-        background-color: rgba($color-primary, .8);
+        background-color: rgba($color-primary,.8);
     }
 
     &__line {
@@ -31,77 +29,75 @@
         top: 50%;
         left: 0%;
         transform: translateY(-50%);
-        height: 2.5rem;
-        width: 7.5rem;
+        height: 3.5rem;
+        width: 11rem;
         background-color: $color-tertiary;
     }
 
+    & .wrapper {
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
     &__content {
-        margin-top: 14rem;
-
-        @media only screen and(max-width: $medium-devices) {
-            margin-top: auto;
-        }
-        & .wrapper {
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-direction: column;
-            padding-left: 3rem;
-
-            @media only screen and(max-width: $medium-devices) {
-                padding-left: 0rem;
-            }
-        }
-
-        &--bottom {
-            display: flex;
-            align-items: flex-end;
-        }
-
-        & .language {
-            & span {
-                display: inline-block;
-                color: $color-tertiary;
-                text-transform: uppercase;
-            }
-        }
+        color: $color-senary;
     }
 
     &__social {
-        margin-right: 2.5rem;
-        & a {
-            color: $color-tertiary;
-            font-size: 4rem;
-            line-height: 0;
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
 
+        & a {
             &:not(:last-child) {
-                margin-right: 2.5rem;
+                margin-right: 2rem;
             }
         }
-        
+
+        & span {
+            color: $color-tertiary;
+            cursor: pointer;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        & span .active {
+            color: $color-senary;
+        }
     }
 
     &__img {
-        height: 34rem;
-        margin-right: -15rem;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
 
         @media only screen and(max-width: $medium-devices) {
             display: none;
         }
-
+        
         & img {
-            height: auto;
-            width: 100%;
-            object-fit: cover;
+            position: absolute;
+            right: -51%;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
 
-    & .down {
+    &__down {
         position: absolute;
         left: 50%;
         bottom: 2.5rem;
         transform: translateX(-50%);
+        animation: down 1.25s ease-in-out infinite;
     }
+
 }
 
 .o-meni {
@@ -193,11 +189,22 @@
         border-radius: 1rem;
         margin-top: 10rem;
 
+        @media only screen and(max-width: $extra-large-devices) {
+            width: 90%;
+            padding: 7.5rem 0rem;
+            margin: 0 auto;
+            margin-top: 12.5rem;
+        }
+
         & svg {
             position: absolute;
             top: -9rem;
             left: 50%;
             transform: translateX(-50%);
+
+            @media only screen and(max-width: $medium-devices) {
+                top: -6rem;
+            }
         }
     }
 }

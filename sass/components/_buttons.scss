@@ -1,0 +1,15 @@
+button {
+    color: $color-tertiary;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    outline-width: 0;
+    text-transform: uppercase;
+}
+
+.active {
+    color: $color-senary;
+}
