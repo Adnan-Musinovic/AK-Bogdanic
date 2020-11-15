@@ -30,13 +30,6 @@ window.addEventListener('load', ()=> {
         ease: Power3.easeOut
     })
 
-    //Navigation
-    .staggerFrom(navLinks, .5, {
-        y: '-25px',
-        opacity: 0,
-        ease: Power3.ease
-    },0.2)
-
     //Hero Line
     .from(heroLine, .3, {
         width: '0px',
@@ -50,6 +43,13 @@ window.addEventListener('load', ()=> {
         ease: Power3.ease
     },0.5)
 
+    //Navigation
+    .staggerFrom(navLinks, .5, {
+        y: '-25px',
+        opacity: 0,
+        ease: Power3.ease
+    },0.2)
+
     //Social
     .staggerFrom(socialIcon, .5, {
         opacity: 0,
@@ -62,7 +62,8 @@ window.addEventListener('load', ()=> {
         ease: Power3.ease
     },.2)
 
-    .from(heroImg,.3,{
+    //Hero image
+    .from(heroImg,.5,{
         opacity: 0,
         scale: 1.5,
         ease: Power3.ease
@@ -179,10 +180,25 @@ window.addEventListener('load', ()=> {
 //Navigation
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('.nav');
+const menuLineTop = document.querySelector('.menu__line--top');
+const menuLineMid = document.querySelector('.menu__line--mid');
+const menuLineBottom = document.querySelector('.menu__line--bottom');
 
 menu.addEventListener('click', ()=> {
     nav.classList.toggle('nav--open');
+
+    //Menu lines animation
+    if(nav.classList.contains('nav--open')) {
+       menuLineTop.classList.add('menu__line--top--open');
+       menuLineMid.classList.add('menu__line--mid--open');
+       menuLineBottom.classList.add('menu__line--bottom--open');
+    } else {
+        menuLineTop.classList.remove('menu__line--top--open');
+       menuLineMid.classList.remove('menu__line--mid--open');
+       menuLineBottom.classList.remove('menu__line--bottom--open');
+    }
 })
+
 
 
 //Language active btn
@@ -199,3 +215,22 @@ Array.from(btns).forEach(item => {
    });
 
 });
+
+
+//Add fixed header on scroll
+window.addEventListener('scroll', ()=> {
+    let wScroll = window.pageYOffset;
+    const header = document.querySelector('.header');
+
+    if(wScroll > 100) {
+        header.classList.add('header--scroll');
+    } else {
+        header.classList.remove('header--scroll');  
+    }
+})
+
+//Footer year
+let footerYear = document.querySelector('.year');
+let date = new Date;
+let currentYear = date.getFullYear();
+footerYear.textContent = currentYear;

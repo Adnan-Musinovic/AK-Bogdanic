@@ -7,7 +7,7 @@
         right: 0%;
         height: 100%;
         width: 50%;
-        background-color: $color-senary;
+        background-color: $color-primary;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -36,7 +36,13 @@
         width: 100%;
 
         @media only screen and(max-width: $medium-devices) {
+            padding: 3.5rem;
+            text-align: right;
+            justify-content: flex-start;
+            align-items: flex-end;
             flex-direction: column;
+            height: 100%;
+            margin-top: 25rem;
         }
     }
 

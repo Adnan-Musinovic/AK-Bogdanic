@@ -1,10 +1,17 @@
 .header {
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0%;
     z-index: 2;
     width: 100%;
     padding: 2rem 0rem;
+    transition: all .5s ease-in-out;
+
+    &--scroll {
+        background-color: $color-primary;
+        transition: all .5s ease-in-out;
+        box-shadow: 0px 5px 5px 0px rgba($color-primary,.3);
+    }
 
     & .wrapper {
         @include space-between-center;
@@ -43,7 +50,26 @@
         &__line {
             height: .4rem;
             width: 100%;
-            background-color: $color-secondary;
+            background-color: $color-senary;
+            transition: all .5s ease-in-out;
+
+            &--top--open,
+            &--mid--open,
+            &--bottom--open {
+                transition: all .5s ease-in-out;
+            }
+
+
+            &--top--open {
+                transform: rotate(45deg) translateY(8px) translateX(4px);
+            }
+            &--mid--open {
+                opacity: 0;
+            }
+
+            &--bottom--open {
+                transform: rotate(-45deg) translateY(-8px) translateX(4px);
+            }
 
             &:not(:last-child) {
                 margin-bottom: .6rem;

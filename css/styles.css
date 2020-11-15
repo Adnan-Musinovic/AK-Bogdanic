@@ -166,7 +166,11 @@ button {
   background-size: cover;
   color: #FFF;
   width: 100%;
-  height: 415px; }
+  height: 477px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; }
   .footer .wrapper {
     justify-content: space-between;
     align-items: flex-start;
@@ -240,7 +244,7 @@ button {
     box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.13); }
     @media only screen and (max-width: 768px) {
       .usluge .grid__item {
-        padding: 7.5rem 0rem; } }
+        padding: 7.5rem 2.5rem; } }
     .usluge .grid__item svg {
       position: absolute;
       top: -4rem;
@@ -252,12 +256,17 @@ button {
           transform: translateX(-50%); } }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: 0%;
   z-index: 2;
   width: 100%;
-  padding: 2rem 0rem; }
+  padding: 2rem 0rem;
+  transition: all .5s ease-in-out; }
+  .header--scroll {
+    background-color: #022648;
+    transition: all .5s ease-in-out;
+    box-shadow: 0px 5px 5px 0px rgba(2, 38, 72, 0.3); }
   .header .wrapper {
     justify-content: space-between;
     align-items: center;
@@ -288,7 +297,16 @@ button {
     .header .menu__line {
       height: .4rem;
       width: 100%;
-      background-color: #284266; }
+      background-color: #FFF;
+      transition: all .5s ease-in-out; }
+      .header .menu__line--top--open, .header .menu__line--mid--open, .header .menu__line--bottom--open {
+        transition: all .5s ease-in-out; }
+      .header .menu__line--top--open {
+        transform: rotate(45deg) translateY(8px) translateX(4px); }
+      .header .menu__line--mid--open {
+        opacity: 0; }
+      .header .menu__line--bottom--open {
+        transform: rotate(-45deg) translateY(-8px) translateX(4px); }
       .header .menu__line:not(:last-child) {
         margin-bottom: .6rem; }
 
@@ -301,7 +319,7 @@ button {
       right: 0%;
       height: 100%;
       width: 50%;
-      background-color: #FFF;
+      background-color: #022648;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -324,7 +342,13 @@ button {
     width: 100%; }
     @media only screen and (max-width: 768px) {
       .nav ul {
-        flex-direction: column; } }
+        padding: 3.5rem;
+        text-align: right;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 25rem; } }
   .nav li {
     transition: all .3s ease;
     border-bottom: 3px solid transparent;
@@ -341,8 +365,8 @@ button {
     transition: all .5s ease-in-out; }
 
 .hero {
-  background-image: url(../../images/Slika.png);
-  background-attachment: fixed;
+  background-image: url(../images/Slika.png);
+  background-attachment: scroll;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -417,6 +441,9 @@ button {
 
 .o-meni__content {
   padding: 5rem 5rem 5rem 0rem; }
+  @media only screen and (max-width: 768px) {
+    .o-meni__content {
+      padding: 15rem 0rem 0rem 0rem; } }
 
 .o-meni ul {
   margin: 0rem 0rem 2rem 4rem; }
@@ -452,6 +479,10 @@ button {
   .parallax .wrapper {
     position: relative;
     height: 100%; }
+    @media only screen and (max-width: 768px) {
+      .parallax .wrapper {
+        justify-content: center;
+        align-items: center; } }
   .parallax::after {
     content: '';
     position: absolute;
@@ -489,7 +520,7 @@ button {
     @media only screen and (max-width: 1200px) {
       .usluge .box {
         width: 90%;
-        padding: 7.5rem 0rem;
+        padding: 7.5rem 2.5rem;
         margin: 0 auto;
         margin-top: 12.5rem; } }
     .usluge .box svg {
