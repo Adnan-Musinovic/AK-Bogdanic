@@ -221,10 +221,17 @@ Array.from(btns).forEach(item => {
 window.addEventListener('scroll', ()=> {
     let wScroll = window.pageYOffset;
     const header = document.querySelector('.header');
+    const navLogo = document.querySelector('.nav--logo');
+    const logo = document.querySelector('.logo');
 
     if(wScroll > 100) {
+        navLogo.style.transform = 'scale(0.65)';
+        logo.style.transform = 'scale(0.8)';
         header.classList.add('header--scroll');
+
     } else {
+        navLogo.style.transform = 'scale(1)';
+        logo.style.transform = 'scale(1)';
         header.classList.remove('header--scroll');  
     }
 })

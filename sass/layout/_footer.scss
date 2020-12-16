@@ -1,16 +1,20 @@
 .footer {
     background-image: url(../images/footer-bg.png);
-    background-attachment: unset;
+    background-attachment: scroll;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     color: $color-senary;
     width: 100%;
-    height: 477px;
+    //height: 477px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+
+    @media only screen and(min-width: $small-devices) {
+        background-position: right bottom;
+    }
 
     & .wrapper {
         justify-content: space-between;
@@ -51,6 +55,7 @@
         background-color: $color-primary;
         padding: 1.5rem 0rem;
         width: 100%;
+        font-size: 1.2rem;
 
         & .wrapper {
             align-items: center;
