@@ -236,7 +236,7 @@ window.addEventListener('scroll', ()=> {
     }
 })
 
-//Footer year
+/*Footer year*/
 let footerYear = document.querySelector('.year');
 let date = new Date;
 let currentYear = date.getFullYear();

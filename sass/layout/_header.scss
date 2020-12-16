@@ -17,7 +17,6 @@
     & .wrapper {
         @include space-between-center;
         height: 100%;
-
         @media only screen and(max-width: $large-devices) {
             width: 90%;
         }
