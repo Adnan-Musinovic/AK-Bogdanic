@@ -23,6 +23,14 @@ window.addEventListener('load', ()=> {
     const box = document.querySelector('.box');
     const uslugeBoxes = document.querySelectorAll('.usluge .grid__item');
 
+    //Close navigation 
+    navLinks.forEach(link => {
+        link.addEventListener('click', ()=> {
+            nav.classList.remove('nav--open');
+            closeNavMenuLines();
+        })
+    })
+
     //Loader
     timeLine
     .to(loader, 1, {
@@ -177,6 +185,18 @@ window.addEventListener('load', ()=> {
     .addTo(controller)
 });
 
+function openNavMenuLines(){
+    menuLineTop.classList.add('menu__line--top--open');
+    menuLineMid.classList.add('menu__line--mid--open');
+    menuLineBottom.classList.add('menu__line--bottom--open');
+}
+
+function closeNavMenuLines(){
+    menuLineTop.classList.remove('menu__line--top--open');
+    menuLineMid.classList.remove('menu__line--mid--open');
+    menuLineBottom.classList.remove('menu__line--bottom--open');
+}
+
 //Navigation
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('.nav');
@@ -189,13 +209,9 @@ menu.addEventListener('click', ()=> {
 
     //Menu lines animation
     if(nav.classList.contains('nav--open')) {
-       menuLineTop.classList.add('menu__line--top--open');
-       menuLineMid.classList.add('menu__line--mid--open');
-       menuLineBottom.classList.add('menu__line--bottom--open');
+       openNavMenuLines();
     } else {
-        menuLineTop.classList.remove('menu__line--top--open');
-       menuLineMid.classList.remove('menu__line--mid--open');
-       menuLineBottom.classList.remove('menu__line--bottom--open');
+        closeNavMenuLines();
     }
 })
 

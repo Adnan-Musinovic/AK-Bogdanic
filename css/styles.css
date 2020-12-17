@@ -410,11 +410,10 @@ button {
     height: 100%;
     position: relative;
     z-index: 2; }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (min-width: 480px) {
       .hero .wrapper {
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: row;
         padding: 8rem 0rem 0rem 0rem; } }
   .hero__content {
     color: #FFF; }
@@ -438,10 +437,7 @@ button {
     position: relative;
     height: 100%;
     width: 100%;
-    display: flex;
-    /*@media only screen and(max-width: $medium-devices) {
-            display: none;
-        }*/ }
+    display: flex; }
     .hero__img img {
       position: absolute;
       right: -51%;
@@ -449,10 +445,7 @@ button {
       transform: translateY(-50%); }
       @media only screen and (max-width: 768px) {
         .hero__img img {
-          position: relative;
-          right: 0;
-          top: 0;
-          transform: translateY(0%) scale(0.65); } }
+          display: none; } }
   .hero__down {
     position: absolute;
     left: 50%;
