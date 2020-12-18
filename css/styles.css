@@ -10,9 +10,9 @@
   padding: 0%;
   box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth; }
-
+/*html {
+    scroll-behavior: smooth;
+}*/
 html, body {
   height: 100%;
   width: 100%; }
@@ -42,7 +42,8 @@ body {
   margin: 0% auto; }
   @media only screen and (min-width: 480px) {
     .wrapper {
-      width: 90%; } }
+      width: 90%;
+      max-width: 100%; } }
 
 a {
   display: inline-block;
@@ -290,7 +291,8 @@ button {
         height: auto;
         object-fit: cover;
         position: relative;
-        z-index: 999; } }
+        z-index: 999;
+        padding: 1.2rem 0rem; } }
   .header .menu {
     height: 2.5rem;
     width: 4rem;
@@ -453,33 +455,34 @@ button {
     transform: translateX(-50%);
     animation: down 1.25s ease-in-out infinite; }
 
-.o-meni__content {
-  padding: 8rem 5rem 8rem 0rem; }
-  @media only screen and (min-width: 480px) {
-    .o-meni__content {
-      padding: 8rem 0rem; } }
-  @media only screen and (min-width: 480px) {
-    .o-meni__content p {
-      text-align: justify; } }
-
-.o-meni ul {
-  margin: 0rem 0rem 2rem 4rem; }
-
-.o-meni li {
-  position: relative;
-  padding-left: 1.2rem; }
-  .o-meni li:not(:last-child) {
-    margin-bottom: 1rem; }
-  .o-meni li::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translateY(-50%);
-    height: .6rem;
-    width: .6rem;
-    border-radius: 50%;
-    background-color: #284266; }
+.o-meni {
+  padding-top: 10rem;
+  margin-top: -10rem; }
+  .o-meni__content {
+    padding: 8rem 5rem 8rem 0rem; }
+    @media only screen and (min-width: 480px) {
+      .o-meni__content {
+        padding: 8rem 0rem 8rem 0rem; } }
+    @media only screen and (min-width: 480px) {
+      .o-meni__content p {
+        text-align: justify; } }
+  .o-meni ul {
+    margin: 0rem 0rem 2rem 4rem; }
+  .o-meni li {
+    position: relative;
+    padding-left: 1.2rem; }
+    .o-meni li:not(:last-child) {
+      margin-bottom: 1rem; }
+    .o-meni li::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      transform: translateY(-50%);
+      height: .6rem;
+      width: .6rem;
+      border-radius: 50%;
+      background-color: #284266; }
 
 .parallax {
   padding: 8rem 0rem;
@@ -518,7 +521,8 @@ button {
       object-fit: cover; }
 
 .usluge {
-  padding: 10rem 0rem;
+  margin-top: -10rem;
+  padding: 20rem 0rem 10rem 0rem;
   text-align: center; }
   .usluge .wrapper {
     justify-content: center;

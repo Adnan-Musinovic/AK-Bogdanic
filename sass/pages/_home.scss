@@ -106,12 +106,14 @@
 }
 
 .o-meni {
+    padding-top: 10rem;
+    margin-top: -10rem;
 
     &__content {
         padding: 8rem 5rem 8rem 0rem;
 
         @media only screen and(min-width: $small-devices) {
-            padding: 8rem 0rem;
+            padding: 8rem 0rem 8rem 0rem;
         }
 
         & p {
@@ -190,9 +192,9 @@
 }
 
 .usluge {
-    padding: 10rem 0rem;
+    margin-top: -10rem;
+    padding: 20rem 0rem 10rem 0rem;
     text-align: center;
-
     & .wrapper {
         justify-content: center;
         align-items: center;
